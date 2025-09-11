@@ -161,6 +161,30 @@
                 font-size: 1em;
             }
         }
+
+        .footer-links {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-links span {
+            color: #ccc;
+            font-size: 0.9em;
+        }
+                
     </style>
 </head>
 <body>
@@ -229,5 +253,22 @@
             document.body.appendChild(footer);
         });
     </script>
+
+        <div class="footer-links">
+        <a href="https://home.petpadapp.link">Home</a>
+        <span>•</span>
+        <a href="https://support.petpadapp.link">Support</a>
+        <span>•</span>
+        <a href="mailto:getpetpadapp@gmail.com">Contact Us</a>
+        <p style="margin-top: 15px; color: #7f8c8d; font-size: 0.9em;">&copy; <span id="currentYear"></span> Pet Pad. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+
 </body>
 </html>
