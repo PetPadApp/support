@@ -47,21 +47,20 @@
         }
         
         .app-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border-radius: 18px;
-            background-color: #f9f5f0;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 22px;
+            background-color: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border: 1px solid rgba(0,0,0,0.05);
         }
-        
+
         .app-icon i {
-            font-size: 40px;
-            color: #8B5A2B;
+            font-size: 60px;
+            color: var(--primary-color);
         }
                 
         h1 {
@@ -71,13 +70,23 @@
             text-align: center;
             position: relative;
             padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
+
         h1::before,
         h1::after {
             content: '🐾';
             margin: 0 10px;
             font-size: 1.2em;
+            display: inline-block; /* Ensure the transform works */
+        }
+
+        h1::after {
+            transform: scaleX(-1);
+            -webkit-transform: scaleX(-1); /* For Safari/Chrome */
+            -ms-transform: scaleX(-1); /* For IE/Edge */
         }
         
         h2 {
@@ -88,6 +97,16 @@
             position: relative;
             padding-left: 15px;
             border-left: 4px solid var(--secondary-color);
+        }
+
+        .page-subtitle {
+            color: var(--primary-color);
+            margin: 30px 0 20px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            padding-left: 0px;
+            border-left: none; /* Remove left border */
         }
         
         p {
@@ -218,7 +237,8 @@
     </div>
     </div>
     
-    <h1>Pet Pad Support</h1>
+    <h1>Pet Pad App</h1>
+    <h2 class="page-subtitle">Support</h2>
     
     <div class="content">
         <section>
